@@ -12,15 +12,11 @@ window.onload = function() {
   let what = ['my homework', 'my phone', 'the car'];
   let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
   
-  let bloques = [who, action, what, when];
+  let itemsExcuse = [who, action, what, when];
 
-  function generarRandom (array) {
-    return array[Math.floor(Math.random() * array.length)]
-  }
+  let generarRandom = array => array[Math.floor(Math.random() * array.length)]
 
-  function generateExcuse() {
-    return bloques.map(generarRandom).join(' ');
-  }
+  let generateExcuse = () => itemsExcuse.map(generarRandom).join(' ');
 
   document.getElementById("excuse").innerText = generateExcuse();
 
